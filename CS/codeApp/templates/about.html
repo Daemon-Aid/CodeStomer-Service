@@ -1,0 +1,405 @@
+{% load static %}
+
+{% block headerinclude %}
+<head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="icon" href="favicon.ico">
+    <title>Codestomer</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+
+    <!-- <link href="{% static '' %}" rel="stylesheet" /> -->
+    <!-- Template CSS Files
+    ================================================== -->
+    <!-- Twitter Bootstrs CSS -->
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css' %} ">
+    <!-- Ionicons Fonts Css -->
+    <link rel="stylesheet" href="{% static 'plugins/ionicons/ionicons.min.css' %}">
+    <!-- animate css -->
+    <link rel="stylesheet" href="{% static 'plugins/animate-css/animate.css' %}">
+    <!-- Hero area slider css-->
+    <link rel="stylesheet" href="{% static 'plugins/slider/slider.css' %}">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="{% static 'plugins/slick/slick.css' %}">
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="{% static 'plugins/facncybox/jquery.fancybox.css' %}">
+    <!-- hover -->
+    <link rel="stylesheet" href="{% static 'plugins/hover/hover-min.css' %}">
+    <!-- template main css file -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+{% endblock headerinclude %}
+
+{% block content %}
+<!--
+        ==================================================
+        Header Section Start
+        Codes lines with a commented "EDIT" have a style tag added cause idk how css works
+        ==================================================
+ -->
+ <section class="top-bar animated-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand title" href="{% url 'codeApp:index_View' %}">
+                        <img src="{% static 'images/logolol.png' %}" alt="logo" style="width: 50px;">    <!-- EDIT -->             
+                            CODESTOMER
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'codeApp:index_View' %}">Home
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'codeApp:about_View' %}">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'codeApp:contact_View' %}">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'codeApp:login_View' %}">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'codeApp:register_View' %}">Register</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Temporary Links
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{% url 'codeApp:admindash_View' %}">Admin Dashboard</a>
+                                    <a class="dropdown-item" href="{% url 'codeApp:error_View' %}">Error</a>
+                                    <a class="dropdown-item" href="{% url 'codeApp:user_View' %}">User</a>
+                                </div>
+                            </li>
+                            <!-- <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Blog
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="blog-fullwidth.html">Blog Full</a>
+                                    <a class="dropdown-item" href="blog-left-sidebar.html">Blog Left sidebar</a>
+                                    <a class="dropdown-item" href="blog-right-sidebar.html">Blog Right sidebar</a>
+                                </div>
+                            </li> -->
+                            <!-- Commented for later use -->
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+        <!-- 
+        ================================================== 
+            Global Page Section Start
+        ================================================== -->
+        <section class="global-page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="block">
+                            <h2>About Company</h2>
+                            <ol class="breadcrumb list-inline text-center">
+                                <li class="list-inline-item">
+                                    <a href="{% url 'codeApp:index_View' %}">
+                                        <i class="ion-ios-home"></i>
+                                        Home  &nbsp; &nbsp;/
+                                    </a>
+                                </li>
+                                <li class="active list-inline-item">About</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+<!-- 
+================================================== 
+    Company Description Section Start
+================================================== -->
+<section class="company-description">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 wow fadeInLeft" data-wow-delay=".3s" >
+                <img src="images/about/about-company.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <div class="block">
+                    <h3 class="subtitle wow fadeInUp" data-wow-delay=".3s" data-wow-duration="500ms">Why We are Different</h3>
+                    <p  class="wow fadeInUp" data-wow-delay=".5s" data-wow-duration="500ms">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequun. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <p  class="wow fadeInUp" data-wow-delay=".7s" data-wow-duration="500ms">
+                        Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- 
+================================================== 
+    Company Feature Section Start
+================================================== -->
+<section class="about-feature clearfix">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 px-0">
+                <div class="block about-feature-1 wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".3s">
+                    <h2>
+                    Why Choose Us
+                    </h2>
+                    <p>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 px-0">
+                <div class="block about-feature-2 wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".5s">
+                    <h2 class="item_title">
+                    What You Get
+                    </h2>
+                    <p>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 px-0">
+                <div class="block about-feature-3 wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".7s">
+                    <h2 class="item_title">
+                    Meet The Energy
+                    </h2>
+                    <p>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- 
+================================================== 
+    Team Section Start
+================================================== -->
+<section id="team">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="subtitle text-center">Meet The Team</h2>
+            </div>
+            <div class="col-md-1 col-sm-9"></div>
+            <div class="col-md-3 col-sm-9">
+            </div>
+            <div class="col-md-4 col-sm-9">
+                <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".7s">
+                    <div class="team-img">
+                        <img src="{% static 'images/team/fatima.png' %}" class="team-pic" alt="">
+                    </div>
+                    <h3 class="team_name">Herah Fatima Labiaga</h3>
+                    <p class="team_designation">CEO, Project Manager</p>
+                    <p class="team_text">Hello! I'm 20 years old. My only goal for now is to graduate college and to have a successful career in the future. I just hope that everybody will be safe from this pandemic, and together we will enjoy this semester. My favorite activities are playing mobile legends, went to the beach along with my family and drawing. Nice meeting you all 🙂</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="team">
+    <div class="container">
+        <div class="row">            
+            <div class="col-md-3 col-sm-6">
+                <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".3s">
+                    <div class="team-img">
+                        <img src="{% static 'images/team/cabahug.png' %}" class="team-pic" alt="">
+                    </div>
+                    <h3 class="team_name">Vir Nichael Cabahug</h3>
+                    <p class="team_designation">CEO, Project Manager</p>
+                    <p class="team_text">a BSIT student at Cebu Institute of Technology- University. He doesn’t want to complicate things, he said “life is made of moments, you have a lot of chance to have a good time”. Even there is a lot of circumstances it does not stop him from pursuing his dreams. In his free time, he enjoys playing instruments such as guitar and playing online games with his friends.</p>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".5s">
+                    <div class="team-img">
+                        <img src="{% static 'images/team/pocong.png' %}" class="team-pic" alt="">
+                    </div>
+                    <h3 class="team_name">Ronald Pocong</h3>
+                    <p class="team_designation">CEO, Project Manager</p>
+                    <p class="team_text">Great day, folks! I'm from Moalboal. I enjoy collecting items, particularly seashells. Spending time with my pals, eating out with them, and going anywhere at any time are among of my favorite things to do.</p>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".5s">
+                    <div class="team-img">
+                        <img src="{% static 'images/team/batino.png' %}" class="team-pic" alt="">
+                    </div>
+                    <h3 class="team_name">Francos Batino</h3>
+                    <p class="team_designation">CEO, Project Manager</p>
+                    <p class="team_text">I am 21 years of age and I enjoy playing video games with friends.</p>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".9s">
+                    <div class="team-img">
+                        <img src="{% static 'images/team/rabadon.png' %}" class="team-pic" alt="">
+                    </div>
+                    <h3 class="team_name">Junemhel Rabadon</h3>
+                    <p class="team_designation">CEO, Project Manager</p>
+                    <p class="team_text">Hey! I'm 21, I like getting a full 8 hours of sleep when I can other than that my hobbies range from playing Dungeons and Dragons, Drawing, Developing Games, and listening to musicals</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 
+        ================================================== 
+            Clients Section Start
+        ================================================== -->
+<!-- <section id="clients">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="subtitle text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay=".3s">Our
+                    Happy Clinets</h2>
+                <p class="subtitle-des text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay=".5s">Lorem
+                    ipsum dolor sit amet, consectetur adipisicing elit. Labore, error.</p>
+                <div id="clients-logo" class="clients-logo-slider">
+                    <img class="img-fluid mx-2" src="images/clients/logo-1.jpg" alt="">
+                    <img class="img-fluid mx-2" src="images/clients/logo-2.jpg" alt="">
+                    <img class="img-fluid mx-2" src="images/clients/logo-3.jpg" alt="">
+                    <img class="img-fluid mx-2" src="images/clients/logo-4.jpg" alt="">
+                    <img class="img-fluid mx-2" src="images/clients/logo-5.jpg" alt="">
+                    <img class="img-fluid mx-2" src="images/clients/logo-1.jpg" alt="">
+                    <img class="img-fluid mx-2" src="images/clients/logo-2.jpg" alt="">
+                    <img class="img-fluid mx-2" src="images/clients/logo-3.jpg" alt="">
+                    <img class="img-fluid mx-2" src="images/clients/logo-4.jpg" alt="">
+                    <img class="img-fluid mx-2" src="images/clients/logo-5.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+
+
+<!--
+==================================================
+Footer Section Start
+================================================== 
+-->
+<footer id="footer">
+    <div class="container">
+        <div class="row content-justify-between">
+            <div class="col-md-8 col-12 text-center text-lg-left text-md-left">
+                <p class="copyright">Copyright: Design and Developed by <a href="http://www.Themefisher.com" target="_blank">Themefisher</a>. <br> 
+                    Get More Bootstrap Template From Our 
+                    <a href="https://themefisher.com/free-bootstrap-templates/" target="_blank">Store</a>
+                </p>
+            </div>
+            <div class="col-md-4 col-12">
+                <!-- Social Media -->
+                <ul class="social text-center text-md-right text-lg-right">
+                    <li>
+                        <a href="http://wwww.fb.com/themefisher" class="Facebook">
+                            <i class="ion-social-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://wwww.twitter.com/themefisher" class="Twitter">
+                            <i class="ion-social-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="Linkedin">
+                            <i class="ion-social-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://wwww.fb.com/themefisher" class="Google Plus">
+                            <i class="ion-social-googleplus"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer> <!-- /#footer -->
+
+
+
+{% endblock content %}
+
+{% block footerinclude %}
+
+
+
+
+
+	<!-- Template Javascript Files
+	================================================== -->
+	<!-- jquery -->
+	<script src="{% static 'plugins/jQurey/jquery.min.js' %}"></script>
+	<!-- Form Validation -->
+    <script src="{% static 'plugins/form-validation/jquery.form.js' %}"></script> 
+    <script src="{% static 'plugins/form-validation/jquery.validate.min.js' %}"></script>
+	<!-- slick slider -->
+	<script src="{% static 'plugins/slick/slick.min.js' %}"></script>
+	<!-- bootstrap js -->
+	<script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}"></script>
+	<!-- wow js -->
+	<script src="{% static 'plugins/wow-js/wow.min.js' %}"></script>
+	<!-- slider js -->
+	<script src="{% static 'plugins/slider/slider.js' %}"></script>
+	<!-- Fancybox -->
+	<script src="{% static 'plugins/facncybox/jquery.fancybox.js' %}"></script>
+	<!-- template main js -->
+	<script src="{% static 'js/main.js' %}"></script>
+
+{% endblock footerinclude %}
